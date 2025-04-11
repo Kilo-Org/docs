@@ -30,6 +30,10 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs',
 
+  customFields: {
+    freeTierAmount: process.env.FREE_TIER_AMOUNT || '$20',
+  },
+
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

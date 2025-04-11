@@ -3,10 +3,16 @@ sidebar_label: Free Tokens
 ---
 
 import { DISCORD_URL } from '@site/src/constants.ts'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+export const FreeTierAmount = () => {
+  const {siteConfig} = useDocusaurusContext();
+  return siteConfig.customFields.freeTierAmount;
+};
 
 # Free Tokens for New Users
 
-When you sign up for Kilo Code, you'll receive **$15 worth of tokens for free** to help you get started. To claim your free tokens:
+When you sign up for Kilo Code, you'll receive **<FreeTierAmount /> worth of tokens for free** to help you get started. To claim your free tokens:
 
 1. Complete the registration process
 2. Join our <a href={DISCORD_URL} target='_blank'>Discord community</a>
