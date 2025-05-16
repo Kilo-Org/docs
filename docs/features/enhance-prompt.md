@@ -10,6 +10,11 @@ The "Enhance Prompt" feature in Kilo Code helps you improve the quality and effe
 *   **Reduced Ambiguity:**  Enhance Prompt helps to eliminate ambiguity and ensure that Kilo Code understands your intent.
 *   **Consistency**: Kilo will consistently format prompts the same way to the AI.
 
+### Before and after
+
+<img src="/docs/img/enhance-prompt/before.png" alt="very primitive prompt" width="300" style={{display: 'inline-block', marginRight: '20px', verticalAlign: 'middle'}} />
+<img src="/docs/img/enhance-prompt/after.png" alt="enhanced prompt" width="300" style={{display: 'inline-block', verticalAlign: 'middle'}} />
+
 ## How to Use Enhance Prompt
 
 1.  **Type your initial prompt:**  Enter your request in the Kilo Code chat input box as you normally would.  This can be a simple question, a complex task description, or anything in between.
@@ -19,6 +24,8 @@ The "Enhance Prompt" feature in Kilo Code helps you improve the quality and effe
 
 ## Customizing the Enhancement Process
 
+### Customizing Template
+
 The "Enhance Prompt" feature uses a customizable prompt template.  You can modify this template to tailor the enhancement process to your specific needs.
 
 1.  **Open the Prompts Tab:** Click the <Codicon name="notebook" /> icon in the Kilo Code top menu bar.
@@ -26,6 +33,16 @@ The "Enhance Prompt" feature uses a customizable prompt template.  You can modif
 3.  **Edit the Prompt Template:** Modify the text in the "Prompt" field.
 
 The default prompt template includes the placeholder `${userInput}`, which will be replaced with your original prompt. You can modify this to fit the model's prompt format, and instruct it how to enhance your request.
+
+### Customizing Provider
+
+Speed up prompt enhancement by switching to a more lightweight LLM model provider (e.g. GPT 4.1 Nano). This delivers faster results at lower cost while maintaining quality.
+
+Create a dedicated profile for Enhance Prompt by following the [API configuration profiles guide](/features/api-configuration-profiles).
+
+<img src="/docs/img/enhance-prompt/custom-enhance-profile.png" alt="Custom profile configuration for Enhance Prompt feature" width="600" />
+
+For a detailed walkthrough: https://youtu.be/R1nDnCK-xzw
 
 ## Limitations and Best Practices
 
