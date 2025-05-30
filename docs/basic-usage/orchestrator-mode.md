@@ -10,7 +10,7 @@ Orchestrator Mode (formerly known as Boomerang Tasks) allows you to break down c
 
 <YouTubeEmbed
   url="https://www.youtube.com/watch?v=20MmJNeOODo"
-  caption="Orhcestrator Mode explained and demonstrated"
+  caption="Orchestrator Mode explained and demonstrated"
 />
 
 
