@@ -31,7 +31,7 @@ Before you begin, make sure you have the following installed:
 1. **Install dependencies**:
 
     ```bash
-    npm run install:all
+    pnpm install
     ```
 
     This command will install dependencies for the main extension, webview UI, and e2e tests.
@@ -65,7 +65,7 @@ The project is organized into several key directories:
 To build the extension:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 This will:
