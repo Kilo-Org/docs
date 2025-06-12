@@ -1,0 +1,41 @@
+---
+sidebar_label: 初始设置
+---
+
+import { DISCORD_URL } from '@site/src/constants.ts'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+export const FreeTierAmount = () => {
+  const {siteConfig} = useDocusaurusContext();
+  return siteConfig.customFields.freeTierAmount;
+};
+
+# 设置Kilo Code
+
+注册Kilo Code时，你将获得**价值<FreeTierAmount />的免费token**作为启动资源。领取免费token的步骤：
+
+1. 完成注册流程
+2. 立即获得$5或$20的免费token
+3. 要获取完整的<FreeTierAmount />额度，需要验证信用卡信息（仅用于身份验证）
+
+:::note 关于临时预授权
+为保护社区并确保服务质量，注册时会临时冻结信用卡$10额度。此预授权通常持续一周左右，**不会实际扣款**。此措施旨在防止免费资源滥用，同时确保正常用户获得最佳体验。我们正在努力在未来取消此限制。
+:::
+
+## 注册流程
+
+Kilo Code提供简单的注册流程，通过你的账号即可使用前沿的编程模型：
+
+1. 在扩展中点击"免费试用Kilo Code"
+2. 使用Google账号登录kilocode.ai
+3. kilocode.ai将提示打开Visual Studio Code
+   * 在网页版IDE中使用时，需要手动复制API密钥
+4. 允许打开VS Code后，还需允许VS Code打开授权URL
+
+<img src="/docs/img/setting-up/signupflow.gif" alt="Kilo Code注册流程演示" />
+
+完成！现在可以开始你的[第一个任务](/getting-started/your-first-task)
+
+:::tip 需要帮助？
+如有任何定价或token相关问题，请联系[支持团队](mailto:hi@kilocode.ai)或加入我们的<a href={DISCORD_URL} target='_blank'>Discord社区</a>。
+:::
