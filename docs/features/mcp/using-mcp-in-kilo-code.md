@@ -23,18 +23,16 @@ MCP server configurations can be managed at two levels:
 
 ### Editing MCP Settings Files
 
-You can edit both global and project-level MCP configuration files directly from the Kilo Code MCP settings view:
+You can edit both global and project-level MCP configuration files directly from the Kilo Code MCP settings view.
 
-1. Click the <Codicon name="server" /> icon in the top navigation of the Kilo Code pane.
-
-  <img src="/docs/img/using-mcp-in-kilo-code/using-mcp-in-kilo-code-10.png" alt="MCP Servers interface in Kilo Code" width="400" />
-
-2. Scroll to the bottom of the MCP settings view.
+1. Click the <Codicon name="gear" /> icon in the top navigation of the Kilo Code pane to open `Settings`.
+2. Click the `MCP Servers` tab on the left side
+3. Choose the `Installed` servers
 3. Click the appropriate button:
     *   **`Edit Global MCP`**: Opens the global `mcp_settings.json` file.
     *   **`Edit Project MCP`**: Opens the project-specific `.kilocode/mcp.json` file. If this file doesn't exist, Kilo Code will create it for you.
 
-  <img src="/docs/img/using-mcp-in-kilo-code/using-mcp-in-kilo-code-9.png" alt="Edit Global MCP and Edit Project MCP buttons" width="600" />
+  <img src="/docs/img/using-mcp-in-kilo-code/mcp-installed-config.png" alt="Edit Global MCP and Edit Project MCP buttons" width="600" />
 
 Both files use a JSON format with a `mcpServers` object containing named server configurations:
 
@@ -116,34 +114,6 @@ Both files use a JSON format with a `mcpServers` object containing named server 
     }
   }
   ```
-  
-  ## Enabling or Disabling MCP Servers
-
-Disabling your MCP Servers here will remove all MCP related logic and definitions from your system prompt, reducing your token usage. This will prevent Kilo Code from connecting to any MCP servers, and the `use_mcp_tool` and `access_mcp_resource` tools will not be available. Check this off if you don't intend to use MCP Servers. This is on by default.
-
-1. Click the <Codicon name="server" /> icon in the top navigation of the Kilo Code pane
-2. Check/Uncheck `Enable MCP Servers` 
-
-  <img src="/docs/img/using-mcp-in-kilo-code/using-mcp-in-kilo-code-2.png" alt="Enable MCP Servers toggle" width="400" />
-
-## Enabling or Disabling MCP Server Creation
-
-Disabling your MCP Server Creation here will just remove the instructions from your system prompt that Kilo Code uses to write MCP servers while not removing the context related to operating them. This reduces token usage. This is on by default.
-
-1. Click the <Codicon name="server" /> icon in the top navigation of the Kilo Code pane
-2. Check/Uncheck `Enable MCP Server Creation` 
-
-  <img src="/docs/img/using-mcp-in-kilo-code/using-mcp-in-kilo-code-3.png" alt="Enable MCP Server Creation toggle" width="400" />
-
-## Managing Individual MCP Servers
-
-   <img src="/docs/img/using-mcp-in-kilo-code/using-mcp-in-kilo-code-8.png" alt="Example of a configuration pane for a MCP Server" width="400" />
-
-Each MCP server has its own configuration panel where you can modify settings, manage tools, and control its operation. To access these settings:
-
-1. Click the <Codicon name="server" /> icon in the top navigation of the Kilo Code pane
-2. Locate the MCP server you want to manage in the list
-   <img src="/docs/img/using-mcp-in-kilo-code/using-mcp-in-kilo-code-4.png" alt="List of MCP Servers" width="400" />
 
 ### Deleting a Server
 
@@ -185,7 +155,7 @@ When enabled, Kilo Code will automatically approve this specific tool without pr
 Kilo Code does not come with any pre-installed MCP servers. You'll need to find and install them separately.
 
 * **Community Repositories:** Check for community-maintained lists of MCP servers on GitHub
-* **Ask Kilo Code:** You can ask Kilo Code to help you find or even create MCP servers (when "[Enable MCP Server Creation](#enabling-or-disabling-mcp-server-creation)" is enabled)
+* **Ask Kilo Code:** You can ask Kilo Code to help you find or even create MCP servers
 * **Build Your Own:** Create custom MCP servers using the SDK to extend Kilo Code with your own tools
 
 For full SDK documentation, visit the [MCP GitHub repository](https://github.com/modelcontextprotocol/).
