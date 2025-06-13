@@ -14,18 +14,18 @@ Custom Instructions are IDE-wide and are applied across all workspaces and maint
 
 **How to set them:**
 
-<img src="/docs/img/custom-instructions/custom-instructions.png" alt="Kilo Code Prompts tab showing global custom instructions interface" width="600" />
-1.  **Open Prompts Tab:** Click the <Codicon name="organization" /> (Modes) icon in the Kilo Code top menu bar
+<img src="/docs/img/custom-instructions/custom-instructions.png" alt="Kilo Code Modes tab showing global custom instructions interface" width="600" />
+1.  **Open Modes Tab:** Click the <Codicon name="organization" /> icon in the Kilo Code top menu bar
 2.  **Find Section:** Find the "Custom Instructions for All Modes" section
 3.  **Enter Instructions:** Enter your instructions in the text area
 4.  **Save Changes:** Click "Done" to save your changes
 
 #### Mode-Specific Instructions
 
-Mode-specific instructions can be set using the Prompts Tab
+Mode-specific instructions can be set using the Modes Tab
 
-    <img src="/docs/img/custom-instructions/custom-instructions-3.png" alt="Kilo Code Prompts tab showing mode-specific custom instructions interface" width="600" />
-    * **Open Tab:** Click the <Codicon name="notebook" /> icon in the Kilo Code top menu bar
+    <img src="/docs/img/custom-instructions/custom-instructions-3.png" alt="Kilo Code Modes tab showing mode-specific custom instructions interface" width="600" />
+    * **Open Tab:** Click the <Codicon name="organization" /> icon in the Kilo Code top menu bar
     * **Select Mode:** Under the Modes heading, click the button for the mode you want to customize
     * **Enter Instructions:** Enter your instructions in the text area under "Mode-specific Custom Instructions (optional)"
     * **Save Changes:** Click "Done" to save your changes
