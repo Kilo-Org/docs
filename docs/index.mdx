@@ -1,82 +1,556 @@
----
-sidebar_label: Welcome
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilo Code Documentation - AI-Powered VS Code Extension</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-divider {
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-6">
+                    <i class="fas fa-code mr-4"></i>Kilo Code
+                </h1>
+                <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    The ultimate open-source AI agent VS Code extension that revolutionizes your coding experience with intelligent automation, code generation, and smart assistance
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-rocket mr-2"></i>Get Started
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition duration-300">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-import { DISCORD_URL, REDDIT_URL, GITHUB_ISSUES_MAIN_URL, GITHUB_FEATURES_URL, YOUTUBE_URL } from '@site/src/constants.ts'
-import Image from '@site/src/components/Image';
+    <!-- Quick Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-center space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-purple-600 font-medium transition duration-300">
+                    <i class="fas fa-star mr-2"></i>Features
+                </a>
+                <a href="#quickstart" class="text-gray-600 hover:text-purple-600 font-medium transition duration-300">
+                    <i class="fas fa-play mr-2"></i>Quick Start
+                </a>
+                <a href="#modes" class="text-gray-600 hover:text-purple-600 font-medium transition duration-300">
+                    <i class="fas fa-cog mr-2"></i>Modes
+                </a>
+                <a href="#resources" class="text-gray-600 hover:text-purple-600 font-medium transition duration-300">
+                    <i class="fas fa-book mr-2"></i>Resources
+                </a>
+            </div>
+        </div>
+    </nav>
 
-# Kilo Code Documentation
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Core Capabilities Section -->
+        <section id="features" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">What Can Kilo Code Do?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Harness the power of AI to transform your development workflow with these powerful capabilities
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center">
+                        <i class="fas fa-magic text-4xl feature-icon mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Generate Code</h3>
+                        <p class="text-gray-600">Transform natural language descriptions into functional code with advanced AI understanding</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center">
+                        <i class="fas fa-tools text-4xl feature-icon mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Refactor & Debug</h3>
+                        <p class="text-gray-600">Intelligent code optimization and systematic debugging assistance for cleaner, more efficient code</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center">
+                        <i class="fas fa-file-alt text-4xl feature-icon mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Documentation</h3>
+                        <p class="text-gray-600">Automatically write and update comprehensive documentation for your codebase</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center">
+                        <i class="fas fa-question-circle text-4xl feature-icon mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Answer Questions</h3>
+                        <p class="text-gray-600">Get instant, intelligent answers about your codebase with contextual understanding</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center">
+                        <i class="fas fa-sync-alt text-4xl feature-icon mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Automate Tasks</h3>
+                        <p class="text-gray-600">Eliminate repetitive tasks with intelligent automation and workflow optimization</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center">
+                        <i class="fas fa-project-diagram text-4xl feature-icon mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-3">Create Projects</h3>
+                        <p class="text-gray-600">Generate new files, projects, and complete application structures from scratch</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-Kilo Code is an open source AI agent VS Code extension. It helps you write code more efficiently by generating code, automating tasks, and providing suggestions.
+        <!-- Section Divider -->
+        <div class="section-divider h-px mb-16"></div>
 
-## What Can Kilo Code Do?
+        <!-- Quick Start Section -->
+        <section id="quickstart" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl p-10">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-rocket mr-3 text-purple-600"></i>Quick Start Guide
+                    </h2>
+                    <p class="text-lg text-gray-600">Get up and running with Kilo Code in just three simple steps</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-purple-600">1</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Install Kilo Code</h3>
+                        <p class="text-gray-600">Download and install the extension from the VS Code marketplace</p>
+                        <a href="#" class="inline-block mt-3 text-purple-600 hover:text-purple-800 font-medium">
+                            Installation Guide <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-purple-600">2</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Set up Kilo Code</h3>
+                        <p class="text-gray-600">Configure your preferences and connect your AI model provider</p>
+                        <a href="#" class="inline-block mt-3 text-purple-600 hover:text-purple-800 font-medium">
+                            Setup Instructions <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold text-purple-600">3</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Try Your First Task</h3>
+                        <p class="text-gray-600">Start with a simple task to experience the power of AI-assisted coding</p>
+                        <a href="#" class="inline-block mt-3 text-purple-600 hover:text-purple-800 font-medium">
+                            First Task Tutorial <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-- 🚀 **Generate Code** from natural language descriptions
-- 🔧 **Refactor & Debug** existing code
-- 📝 **Write & Update** documentation
-- 🤔 **Answer Questions** about your codebase
-- 🔄 **Automate** repetitive tasks
-- 🏗️ **Create** new files and projects
+        <!-- Modes Section -->
+        <section id="modes" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-layer-group mr-3 text-purple-600"></i>Intelligent Modes
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Kilo Code adapts to your specific needs with specialized modes designed for different development scenarios
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-code mr-3 text-purple-600"></i>Code Mode
+                        <span class="ml-2 text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded">Default</span>
+                    </h3>
+                    <p class="text-gray-600 mb-4">Perfect for general-purpose coding tasks, feature implementation, and everyday development work</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Code generation and completion</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Bug fixes and optimization</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Feature implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-drafting-compass mr-3 text-blue-600"></i>Architect Mode
+                    </h3>
+                    <p class="text-gray-600 mb-4">Strategic planning and high-level system design with technical leadership perspective</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>System architecture planning</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Technical decision guidance</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Scalability recommendations</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-500">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-question mr-3 text-green-600"></i>Ask Mode
+                    </h3>
+                    <p class="text-gray-600 mb-4">Intelligent Q&A for code explanations, concept clarification, and learning assistance</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Code explanation and analysis</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Concept clarification</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Best practices guidance</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-l-4 border-red-500">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-bug mr-3 text-red-600"></i>Debug Mode
+                    </h3>
+                    <p class="text-gray-600 mb-4">Systematic problem diagnosis and debugging with advanced error analysis capabilities</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Error analysis and resolution</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Performance debugging</li>
+                        <li><i class="fas fa-check mr-2 text-green-500"></i>Systematic problem solving</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200">
+                <h4 class="text-lg font-semibold text-purple-800 mb-2">
+                    <i class="fas fa-plus-circle mr-2"></i>Custom Modes
+                </h4>
+                <p class="text-purple-700">
+                    Create unlimited specialized personas for security auditing, performance optimization, documentation, or any other task specific to your workflow
+                </p>
+            </div>
+        </section>
 
-## Quick Start
+        <!-- Tools and Extensions Section -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-10">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-4">
+                        <i class="fas fa-toolbox mr-3"></i>Powerful Tools & Extensions
+                    </h2>
+                    <p class="text-lg opacity-90">Comprehensive toolkit for enhanced development experience</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-300">
+                            <i class="fas fa-wrench mr-2"></i>Core Tools
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-file-code mr-3 text-green-400"></i>
+                                <span>File reading and writing operations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-terminal mr-3 text-blue-400"></i>
+                                <span>Terminal command execution</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-globe mr-3 text-purple-400"></i>
+                                <span>Browser automation and control</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-search mr-3 text-yellow-400"></i>
+                                <span>Intelligent codebase search</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-purple-300">
+                            <i class="fas fa-puzzle-piece mr-2"></i>Extensions
+                        </h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-plug mr-3 text-green-400"></i>
+                                <span>MCP (Model Context Protocol) integration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-server mr-3 text-blue-400"></i>
+                                <span>Local AI models support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-database mr-3 text-purple-400"></i>
+                                <span>Database connectivity</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-cloud mr-3 text-yellow-400"></i>
+                                <span>External API integration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-1. [Install Kilo Code](/getting-started/installing)
-2. [Set up Kilo Code](/getting-started/setting-up)
-3. [Try Your First Task](/getting-started/your-first-task)
+        <!-- Customization Section -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-sliders-h mr-3 text-purple-600"></i>Customization Options
+                </h2>
+                <p class="text-lg text-gray-600">Tailor Kilo Code to match your unique development workflow</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <i class="fas fa-cog text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">Settings Management</h3>
+                    <p class="text-sm text-gray-600">Configure your experience with granular control</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <i class="fas fa-user-cog text-3xl text-green-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">Custom Instructions</h3>
+                    <p class="text-sm text-gray-600">Global plugin-wide instructions for personalized behavior</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <i class="fas fa-rules text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">Project Rules</h3>
+                    <p class="text-sm text-gray-600">Define project-specific rules and guidelines</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <i class="fas fa-key text-3xl text-red-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">API Profiles</h3>
+                    <p class="text-sm text-gray-600">Multiple configuration profiles for different model providers</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <i class="fas fa-check-circle text-3xl text-indigo-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">Auto-Approval</h3>
+                    <p class="text-sm text-gray-600">Streamlined workflows with intelligent automation</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <i class="fas fa-palette text-3xl text-pink-600 mb-4"></i>
+                    <h3 class="font-semibold mb-2">Interface Themes</h3>
+                    <p class="text-sm text-gray-600">Personalize the visual experience to your preference</p>
+                </div>
+            </div>
+        </section>
 
-## Features
+        <!-- Resources Section -->
+        <section id="resources" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl p-10">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-book-open mr-3 text-purple-600"></i>Resources & Community
+                    </h2>
+                    <p class="text-lg text-gray-600">Everything you need to master Kilo Code and connect with other developers</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">
+                            <i class="fas fa-graduation-cap mr-2 text-blue-600"></i>Documentation
+                        </h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fas fa-play-circle mr-3 text-green-600"></i>
+                                <div>
+                                    <h4 class="font-medium">Using Kilo Code</h4>
+                                    <p class="text-sm text-gray-600">Learn the basics and fundamental concepts</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fas fa-star mr-3 text-purple-600"></i>
+                                <div>
+                                    <h4 class="font-medium">Core Concepts</h4>
+                                    <p class="text-sm text-gray-600">Master key features and capabilities</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fas fa-rocket mr-3 text-red-600"></i>
+                                <div>
+                                    <h4 class="font-medium">Advanced Usage</h4>
+                                    <p class="text-sm text-gray-600">Take your skills to the next level</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fas fa-question-circle mr-3 text-orange-600"></i>
+                                <div>
+                                    <h4 class="font-medium">FAQ</h4>
+                                    <p class="text-sm text-gray-600">Get answers to common questions</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">
+                            <i class="fas fa-users mr-2 text-green-600"></i>Community
+                        </h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fab fa-discord mr-3 text-indigo-600 text-xl"></i>
+                                <div>
+                                    <h4 class="font-medium">Discord Server</h4>
+                                    <p class="text-sm text-gray-600">Real-time help and discussions</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fab fa-reddit mr-3 text-orange-600 text-xl"></i>
+                                <div>
+                                    <h4 class="font-medium">Reddit Community</h4>
+                                    <p class="text-sm text-gray-600">Share experiences and tips</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fab fa-youtube mr-3 text-red-600 text-xl"></i>
+                                <div>
+                                    <h4 class="font-medium">YouTube Channel</h4>
+                                    <p class="text-sm text-gray-600">Hands-on tutorials and guides</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-300">
+                                <i class="fab fa-github mr-3 text-gray-800 text-xl"></i>
+                                <div>
+                                    <h4 class="font-medium">GitHub</h4>
+                                    <p class="text-sm text-gray-600">Report issues and request features</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<Image src="/docs/img/kilogif.gif" alt="GIF showing some of the capabilities of Kilo Code" width="600" />
+        <!-- Call to Action -->
+        <section class="text-center">
+            <div class="gradient-bg text-white rounded-2xl p-12">
+                <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Development Experience?</h2>
+                <p class="text-xl mb-8 opacity-90">Join thousands of developers who are already using Kilo Code to write better code faster</p>
+                <div class="flex justify-center space-x-4">
+                    <button class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-download mr-2"></i>Install Kilo Code
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition duration-300">
+                        <i class="fas fa-book mr-2"></i>Read Documentation
+                    </button>
+                </div>
+                <p class="mt-6 text-sm opacity-75">
+                    <i class="fas fa-shield-alt mr-2"></i>Open source • <i class="fas fa-heart mr-2 ml-4"></i>Community driven • <i class="fas fa-code mr-2 ml-4"></i>Developer focused
+                </p>
+            </div>
+        </section>
+    </main>
 
-### Basics
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kilo Code</h3>
+                    <p class="text-gray-400 text-sm">Empowering developers with AI-driven coding assistance</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Installation</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Tutorials</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Discord</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Reddit</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">GitHub</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">YouTube</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Report Issues</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Feature Requests</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Contributing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Kilo Code. Open source project built with ❤️ by the developer community.
+                </p>
+            </div>
+        </div>
+    </footer>
 
-You interact with Kilo Code through [the chat interface](/basic-usage/the-chat-interface) - just type what you want and Kilo Code will use the latest coding-optomized AI models to fulfill the request. You can change [modes](/basic-usage/using-modes) to have Kilo Code act in different ways, control what [actions](/features/auto-approving-actions) Kilo code can take, and interact with your code directly with [code actions](/features/code-actions).
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-### Using Kilo Code
-
-#### Multiple Modes
-Kilo Code adapts to your needs with specialized [modes](/basic-usage/using-modes):
-- [**Code Mode:**](/basic-usage/using-modes#code-mode-default) For general-purpose coding tasks
-- [**Architect Mode:**](/basic-usage/using-modes#architect-mode) For planning and technical leadership
-- [**Ask Mode:**](/basic-usage/using-modes#ask-mode) For answering questions and providing information
-- [**Debug Mode:**](/basic-usage/using-modes#debug-mode) For systematic problem diagnosis
-- **[Custom Modes](/features/custom-modes):** Create unlimited specialized personas for security auditing, performance optimization, documentation, or any other task
-
-#### Core Tools
-Kilo Code comes with powerful [tools](/features/tools/tool-use-overview) that can:
-- [Read](/features/tools/read-file) and [write](/features/tools/write-to-file) files in your project
-- [Execute commands](/features/tools/execute-command) in your VS Code terminal
-- [Control a web browser](/features/tools/browser-action)
-- [Ask follow-up questions](/features/tools/ask-followup-question)
-- [Search your codebase](/features/tools/search-files)
-
-See the complete [Tools Reference](/features/tools/tool-use-overview) for all available tools.
-
-### Extending Kilo Code
-- **[MCP (Model Context Protocol)](/features/mcp/overview):** Add unlimited custom tools, integrate with external APIs, connect to databases, or create specialized development tools
-- **[Local Models](/advanced-usage/local-models):** Run Kilo Code with local AI models for offline use or enhanced privacy
-
-### Customizing Kilo Code
-Make Kilo Code work your way with:
-- [Settings Management](/features/settings-management) for configuring your experience
-- [Custom Modes](/features/custom-modes) for specialized tasks
-- [Custom Rules](/advanced-usage/custom-rules) for project-specific rules
-- [Custom Instructions](/advanced-usage/custom-instructions) for global plugin-wide instructions
-- [API Configuration Profiles](/features/api-configuration-profiles) for different model providers
-- [Auto-Approval Settings](/features/auto-approving-actions) for faster workflows
-
-## Resources
-
-### Documentation
-- [Using Kilo Code](/basic-usage/the-chat-interface) - Learn the basics
-- [Core Concepts](/features/auto-approving-actions) - Master key features
-- [Advanced Usage](/advanced-usage/prompt-engineering) - Take your skills further
-- [Frequently Asked Questions](/faq) - Get answers to common questions
-
-### Community
-- **Discord:** <a href={DISCORD_URL} target="_blank">Join our Discord server</a> for real-time help and discussions
-- **Reddit:** <a href={REDDIT_URL} target="_blank">Visit our subreddit</a> to share experiences and tips
-- **YouTube:** <a href={YOUTUBE_URL} target="_blank">Check out our YouTube</a> to learn hands on skills when using Kilo Code
-- **GitHub:** Report <a href={GITHUB_ISSUES_MAIN_URL} target="_blank">issues</a> or request <a href={GITHUB_FEATURES_URL} target="_blank">features</a>
-
-Ready to get started? Click the **Next** button below to begin your journey with Kilo Code!
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
