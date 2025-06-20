@@ -25,8 +25,9 @@ const sidebars: SidebarsConfig = {
         'basic-usage/using-modes',
         'basic-usage/orchestrator-mode',
         'basic-usage/context-mentions',
+        'basic-usage/git-commit-generation',
         'features/code-actions',
-        'basic-usage/adding-tokens'
+        'basic-usage/adding-tokens',
       ],
     },
     {
@@ -39,6 +40,7 @@ const sidebars: SidebarsConfig = {
         'features/enhance-prompt',
         'features/checkpoints',
         'tips-and-tricks',
+
       ],
     },
     {
