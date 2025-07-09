@@ -1,7 +1,7 @@
 # Why MCPs Are the Missing Piece You Need
 ### And How They Actually Work (Spoiler: It's Not What You Think)
 
-You know that moment when you ask `Sonnet` to "search for the latest React documentation" and it confidently starts typing out what looks like search results? Here's the thing that'll blow your mind: **It isn't actually searching anything**. Neither is `Gemini Pro` when it "browses the web" or `GPT-4.1` when it "edits your files."
+You know that moment when you ask `Sonnet` to "search for the latest React documentation" and it confidently starts typing out what looks like search results? Here's the thing that'll blow your mind: **It isn't actually searching anything**. Neither is `Gemini Pro` when it "browses the web" or `GPT-4o` when it "edits your files."
 
 LLMs don't use APIs. They can't. They are literally not capable of it.
 
@@ -11,13 +11,13 @@ When you see Kilo Code editing your files, it's not Sonnet directly manipulating
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece.png)
 
-How many requests to and responses from an AI model are happening on this screenshot? It looks like only one, but it's just a deceitful trick - there are two requests and therefore two responses. In first, the model is asked about a new GPU which it doesn't know, so it needs to run a search. Search is done by the Claude application installed on my macbook, and then the search results are sent again to the model - in a second request!
+How many requests to and responses from an AI model are happening in this screenshot? It looks like only one, but it's just a deceitful trick - there are two requests and therefore two responses. In the first, the model is asked about a new GPU which it doesn't know, so it needs to run a search. The search is done by the Claude application installed on my MacBook, and then the search results are sent again to the model - in a second request!
 
-The AI models are like a really smart person who can only, exclusively communicate through written notes, and there is a someone with hands who actually does the work. The AI writes "please create a file called `app.js` with this content," and Kilo Code goes "got it" and creates the file.
+The AI models are like a really smart person who can only, exclusively communicate through written notes, and there is someone with hands who actually does the work. The AI writes "please create a file called `app.js` with this content," and Kilo Code goes "got it" and creates the file.
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece-1.png)
 
-## But How Does This Works?
+## But How Does This Work?
 
 Every time you send a message to an AI model, the request contains two parts:
 
@@ -26,11 +26,11 @@ Every time you send a message to an AI model, the request contains two parts:
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece-2.png)
 
-Those instructions contain something very important - tool definitions! They tell to the model "hey, if you need to write to a file, format your response like this: `<write_to_file><path>...</path><content>...</content></write_to_file>`" 
+Those instructions contain something very important - tool definitions! They tell the model "hey, if you need to write to a file, format your response like this: `<write_to_file><path>...</path><content>...</content></write_to_file>`"
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece-3.png)
 
-After reading those instructions, AI model knows it can search, edit files, execute console commands, etc, etc. If the model decides to use such a tull, it will response with xml-structured answer, agent will parse this answer, do actions accordingly, and return the response so the Model knows how it all went.
+After reading those instructions, the AI model knows it can search, edit files, execute console commands, etc. If the model decides to use such a tool, it will respond with an XML-structured answer, the agent will parse this answer, do actions accordingly, and return the response so the model knows how it all went.
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece-4.png)
 
@@ -54,7 +54,7 @@ An MCP server does two main things:
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece-10.png)
 
-Meanwhile, the AI agent (In MCP terminology it's called MCP client) does its part:
+Meanwhile, the AI agent (in MCP terminology it's called MCP client) does its part:
 1. **Collects available MCP tools** and _adds them to the system prompt_
 2. **Routes tool requests** - either uses native tools directly or calls the appropriate MCP server
 
@@ -70,7 +70,7 @@ Let's look at some MCP servers that are genuinely useful:
 
 ## Sample Configuration
 
-That's how your `.kilocode/mcp.json` file looks like when you install GitHub MCP locally - I've simplified it a bit but overall idea is here! It explains to Kilo Code on how to call this server and request it tools or use one of it. As you see, GitHub MCP is distributed as a Docker image. Others can be distributed in different form and shape
+That's how your `.kilocode/mcp.json` file looks when you install GitHub MCP locally - I've simplified it a bit but the overall idea is here! It explains to Kilo Code how to call this server and request its tools or use one of them. As you can see, GitHub MCP is distributed as a Docker image. Others can be distributed in different forms and shapes.
 
 ![alt text](../static/img/why-mcps-are-the-missing-piece/why-mcps-are-the-missing-piece-7.png)
 
@@ -105,7 +105,7 @@ This is why you shouldn't just install every MCP server you find. Be strategic:
 Ready to try MCP? Here's the practical approach:
 
 1. **Start small** - Pick one specific problem you want to solve (like GitHub integration)
-2. **Install locally first** - First install MCP locally instead (per project), not globally. You can move them later!
+2. **Install locally first** - Install MCP locally (per project) instead of globally. You can move them later!
 3. **Test thoroughly** - Make sure the server works reliably before depending on it
 4. **Monitor costs** - Keep an eye on how MCP usage affects your API bills
 
@@ -115,7 +115,7 @@ The setup is straightforward in Kilo Code. Head to `MCP Servers → Installed` a
 
 ## The Bottom Line
 
-MCP isn't just another integration method - it's a fundamental shift in how AI assistants can interact with the world. Instead of being limited to a fixed set of capabilities, your AI can now adapt to your specific workflow and tools, even proprietary. The protocol is still young (remember, it was only published in November 2024), but the potential is massive. We're moving from "AI assistants that can do some predefined tasks" to "AI assistants that can learn to use any tool you need."
+MCP isn't just another integration method - it's a fundamental shift in how AI assistants can interact with the world. Instead of being limited to a fixed set of capabilities, your AI can now adapt to your specific workflow and tools, even proprietary ones. The protocol is still young (remember, it was only published in November 2024), but the potential is massive. We're moving from "AI assistants that can do some predefined tasks" to "AI assistants that can learn to use any tool you need."
 
 MCPs solve a real problem: the gap between what AI models can theoretically do and what they can actually access. They're not perfect - they add complexity and cost - but they're the missing piece that makes AI assistants genuinely useful for specialized workflows. The era of AI assistants that can only work with built-in tools is ending. MCPs are how we get to AI that works with *your* tools.
 
