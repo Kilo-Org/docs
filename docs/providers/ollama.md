@@ -111,11 +111,7 @@ The following models look like reasonable choices, but were found to **not** wor
 
 ## Setting up Ollama
 
-1.  **Download and Install Ollama:**  Download the Ollama installer for your operating system from the [Ollama website](https://ollama.com/). Follow the installation instructions and *set the `OLLAMA_CONTEXT_LENGTH` environment variable* to prevent Ollama from truncating prompts. Make sure Ollama is running:
-
-    ```bash
-    OLLAMA_CONTEXT_LENGTH=131072 ollama serve
-    ```
+1.  **Download and Install Ollama:**  Download the Ollama installer for your operating system from the [Ollama website](https://ollama.com/). Follow the installation instructions and make sure Ollama is running:
 
 2.  **Download a Model:** Once you've downloaded a model, you can use Kilo Code offline with that model. To download a model, open your terminal and run:
 
