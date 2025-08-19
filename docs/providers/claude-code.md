@@ -26,8 +26,12 @@ If this environment variable is set on your system, the `claude` tool may use it
 
 Kilo Code supports the following Claude models through Claude Code:
 
-- `claude-sonnet-4` (Recommended)
-- `claude-4-opus`
+- **Claude Opus 4.1** (Most capable)
+- **Claude Opus 4**
+- **Claude Sonnet 4** (Latest, recommended)
+- **Claude 3.7 Sonnet**
+- **Claude 3.5 Sonnet**
+- **Claude 3.5 Haiku** (Fast responses)
 
 The specific models available depend on your Claude subscription and plan. See [Anthropic's Model Documentation](https://docs.anthropic.com/en/docs/about-claude/models) for more details on each model's capabilities.
 
